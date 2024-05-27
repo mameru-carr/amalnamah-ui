@@ -1,0 +1,31 @@
+
+<template>
+    <div class="new-todo">
+        <input v-model="title" required type="text" id="title-input" placeholder="Enter Title"/>
+        <button @click="handleSubmit">ADD</button>
+    </div>
+</template>
+
+<script setup>
+import { ref } from "vue";
+import axios from "axios";
+import logger from "@/Services/Logging/logger.js";
+const title = ref("");
+const base_url = "http://localhost:5156/api/todos";
+
+const emits = defineEmits(["newTodoSubmit"]);
+
+async function handleSubmit() {
+    try {
+        await axios.post(base_url, {
+            title: title.value,
+        });
+        // reset input box
+        title.value = "";
+        emits("newTodoSubmit");
+    } catch (error) {
+        logger.info("Error creating todos.");
+        logger.error(error);
+    }
+}
+</script>

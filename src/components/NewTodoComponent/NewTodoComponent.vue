@@ -11,7 +11,7 @@ import { ref } from "vue";
 import axios from "axios";
 import logger from "@/Services/Logging/logger.js";
 const title = ref("");
-const base_url = "http://localhost:5156/api/todos";
+const base_url = "http://localhost:5035/api/todos";
 
 const emits = defineEmits(["newTodoSubmit"]);
 

@@ -1,7 +1,7 @@
 
 <template>
-    <TodoComponent v-for="(todo, index) in todos" :key="index" :todo="todo"/>
     <NewTodoComponent @new-todo-submit="onNewTodoSubmit"/>
+    <TodoComponent v-for="(todo, index) in todos" :key="index" :todo="todo"/>
 </template>
 
 <script setup>

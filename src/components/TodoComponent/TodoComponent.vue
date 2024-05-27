@@ -1,30 +1,28 @@
 <template>
     <div class="todo">
-        <p class="todo-title">
-            <template v-if="editMode">
-                <div class="edit-todo">
-                    <label><input v-model="done" checked="{{ done }}" type="checkbox" @click="toggleCompleted"/> Mark As
+        <template v-if="editMode">
+            <div class="edit-todo">
+                <label><input v-model="done" checked="{{ done }}" type="checkbox" @click="toggleCompleted"/> Mark As
                     Completed </label>
-                    <label>Title: </label> <input v-model="title" type="text"/>
-                    <label>Description: </label> <input v-model="description" type="text"/>
-                    <button class="save-btn" @click="editTodo">Save</button>
-                    <button class="cancel-btn" @click="toggleEditMode">Cancel</button>
-                </div>
-            </template>
-            <template v-else>
-                <div class="todo-list-item">
-                    <label class="completed-label">
+                <label>Title: </label> <input v-model="title" type="text"/>
+                <label>Description: </label> <input v-model="description" type="text"/>
+                <button class="save-btn" @click="editTodo">Save</button>
+                <button class="cancel-btn" @click="toggleEditMode">Cancel</button>
+            </div>
+        </template>
+        <template v-else>
+            <div class="todo-list-item">
+                <label class="completed-label">
                     <input v-model="done" checked="{{ done }}" class="completed-checkbox"
                            type="checkbox" @click="toggleCompleted"/>
                     Mark As Completed
                 </label>
-                    <p class="title">{{ todo.title }}</p>
-                    <p class="description">{{ todo.description }}</p>
-                    <button class="edit-btn" @click="toggleEditMode">Edit</button>
-                    <!--                <button @click="deleteTodo">Delete</button>-->
-                </div>
-            </template>
-        </p>
+                <p class="title">{{ todo.title }}</p>
+                <p class="description">{{ todo.description }}</p>
+                <button class="edit-btn" @click="toggleEditMode">Edit</button>
+                <!--                <button @click="deleteTodo">Delete</button>-->
+            </div>
+        </template>
     </div>
 </template>
 
@@ -97,5 +95,20 @@ function toggleCompleted() {
 </script>
 
 <style>
+.todo-list-item, .edit-todo {
+    border: 0.125rem solid black;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+
+.title {
+    font-family: "Alegreya", "Georgia", serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: 1rem;
+}
 
 </style>

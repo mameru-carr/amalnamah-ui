@@ -1,7 +1,13 @@
 
 <template>
-    <NewTodoComponent @new-todo-submit="onNewTodoSubmit"/>
-    <TodoComponent v-for="(todo, index) in todos" :key="index" :todo="todo"/>
+    <div class="center">
+        <NewTodoComponent @new-todo-submit="onNewTodoSubmit"/>
+    </div>
+    <div class="center">
+        <div class="todo-list">
+            <TodoComponent v-for="(todo, index) in todos" :key="index" :todo="todo"/>
+        </div>
+    </div>
 </template>
 
 <script setup>
@@ -28,4 +34,17 @@ async function onNewTodoSubmit() {
     todos.value = response.data;
 }
 </script>
+
+<style>
+.center {
+    display: flex;
+    place-content: center;
+}
+.todo-list {
+    max-width: 80vw;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+</style>
 

@@ -1,5 +1,5 @@
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-lightblue.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
-# todo-frontend
+# Amalnamah-UI
 Project to Learn Vue.js
 
 # License and Copyright

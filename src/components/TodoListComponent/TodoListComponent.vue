@@ -10,12 +10,12 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import TodoComponent from "../TodoComponent/TodoComponent.vue";
-import NewTodoComponent from "@/components/NewTodoComponent/NewTodoComponent.vue";
+import NewTodoComponent from "@components/NewTodoComponent/NewTodoComponent.vue";
 import {onMounted, ref} from "vue";
 import axios from "axios";
-import logger from "@/Services/Logging/logger.js";
+import logger from "@/services/logger/logger.ts";
 
 const base_url = "http://localhost:5035/api/todos";
 const todos = ref([]);

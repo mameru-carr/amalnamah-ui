@@ -7,10 +7,11 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import axios from "axios";
-import logger from "@/Services/Logging/logger.js";
+import logger from "@logger/logger";
+
 const title = ref("");
 const description = ref("");
 const base_url = "http://localhost:5035/api/todos";
@@ -37,7 +38,4 @@ async function handleSubmit() {
 .new-todo {
     margin: 1rem;
 }
-.new-todo input {
-}
-
 </style>

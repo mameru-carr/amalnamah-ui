@@ -4,9 +4,9 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import "./global.css";
-import TodoListComponent from "@/components/TodoListComponent/TodoListComponent.vue";
+import TodoListComponent from "@components/TodoListComponent/TodoListComponent.vue";
 </script>
 
 <style>

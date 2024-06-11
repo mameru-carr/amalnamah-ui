@@ -1,14 +1,13 @@
-
 <template>
     <div class="new-todo">
-        <input v-model="title" required type="text" id="title-input" placeholder="Enter Title"/>
-        <input v-model="description" type="text" id="description-input" placeholder="Enter Description"/>
+        <input id="title-input" v-model="title" placeholder="Enter Title" required type="text"/>
+        <input id="description-input" v-model="description" placeholder="Enter Description" type="text"/>
         <button @click="handleSubmit">ADD</button>
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref } from "vue";
+<script lang="ts" setup>
+import {ref} from "vue";
 import axios from "axios";
 import logger from "@logger/logger";
 

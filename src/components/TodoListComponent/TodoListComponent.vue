@@ -33,6 +33,7 @@ async function onNewTodoSubmit() {
     const response = await axios.get(base_url);
     todos.value = response.data;
 }
+
 </script>
 
 <style>

@@ -13,11 +13,16 @@
     "@vue/cli-service": "^5.0.8",
     "axios": "^1.7.2",
     "pino": "^9.1.0",
-    "vue": "^3.4.21"
+    "pug": "^3.0.3",
+    "tsx": "^4.15.2",
+    "vue": "^3.4.21",
+    "vue-pug-plugin": "^2.0.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
-    "typescript": "^5.2.2",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
     "vite": "^5.2.0",
     "vue-tsc": "^2.0.6"
   }

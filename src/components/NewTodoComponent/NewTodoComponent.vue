@@ -1,9 +1,8 @@
-<template>
-    <div class="new-todo">
-        <input id="title-input" v-model="title" placeholder="Enter Title" required type="text"/>
-        <input id="description-input" v-model="description" placeholder="Enter Description" type="text"/>
-        <button @click="handleSubmit">ADD</button>
-    </div>
+<template lang="pug">
+.new-todo
+    input#title-input(v-model="title" placeholder="Enter Title" required type="text")
+    input#description-input(v-model="description" placeholder="Enter Description" type="text")
+    button(@click="handleSubmit") ADD
 </template>
 
 <script lang="ts" setup>

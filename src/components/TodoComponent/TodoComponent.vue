@@ -2,7 +2,7 @@
     <div class="todo">
         <template v-if="editMode">
             <div class="edit-todo">
-                <label><input v-model="done" checked="{{ done }}" type="checkbox" @click="toggleCompleted"/> Mark As
+                <label><input v-model="done" :checked="done" type="checkbox" @click="toggleCompleted"/> Mark As
                     Completed </label>
                 <label>Title: </label> <input v-model="title" type="text"/>
                 <label>Description: </label> <input v-model="description" type="text"/>
@@ -13,7 +13,7 @@
         <template v-else>
             <div class="todo-list-item">
                 <label class="completed-label">
-                    <input v-model="done" checked="{{ done }}" class="completed-checkbox"
+                    <input v-model="done" :checked="done" class="completed-checkbox"
                            type="checkbox" @click="toggleCompleted"/>
                     Mark As Completed
                 </label>
@@ -26,7 +26,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 import {ref} from "vue";
 import axios from "axios";

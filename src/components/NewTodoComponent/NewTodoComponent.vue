@@ -1,16 +1,16 @@
-
 <template>
     <div class="new-todo">
-        <input v-model="title" required type="text" id="title-input" placeholder="Enter Title"/>
-        <input v-model="description" type="text" id="description-input" placeholder="Enter Description"/>
+        <input id="title-input" v-model="title" placeholder="Enter Title" required type="text"/>
+        <input id="description-input" v-model="description" placeholder="Enter Description" type="text"/>
         <button @click="handleSubmit">ADD</button>
     </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script lang="ts" setup>
+import {ref} from "vue";
 import axios from "axios";
-import logger from "@/Services/Logging/logger.js";
+import logger from "@logger/logger";
+
 const title = ref("");
 const description = ref("");
 const base_url = "http://localhost:5035/api/todos";
@@ -37,7 +37,4 @@ async function handleSubmit() {
 .new-todo {
     margin: 1rem;
 }
-.new-todo input {
-}
-
 </style>

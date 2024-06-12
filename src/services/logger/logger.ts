@@ -6,7 +6,7 @@ const pinoOptions = {
 }
 
 if (import.meta.env.VITE_ENVIRONMENT === "development") {
-    pinoOptions.prettyPrint = true;
+    // pinoOptions.prettyPrint = true;
 }
 
 const logger = pino(pinoOptions);

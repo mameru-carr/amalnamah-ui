@@ -3,6 +3,8 @@
 ![GitHub open-pull-requests](https://badgen.net/github/open-prs/mameru-carr/amalnamah-ui)
 ![GitHub branches](https://badgen.net/github/branches/mameru-carr/amalnamah-ui)
 ![Commits](https://badgen.net/github/commits/mameru-carr/mameru-carr)
+![Open PRs](https://badgen.net/github/open-prs/mameru-carr/amalnamah-ui)
+![Stars](https://badgen.net/github/stars/mameru-carr/amalnamah-ui)
 ![Dependabot](https://badgen.net/github/dependabot/mameru-carr/amalnamah-ui)
 ![Dependencies](https://img.shields.io/librariesio/github/mameru-carr/amalnamah-ui)
 ![Milestones](https://badgen.net/github/milestones/mameru-carr/amalnamah-ui/1)

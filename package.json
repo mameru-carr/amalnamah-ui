@@ -7,7 +7,8 @@
     "dev": "vite",
     "start": "bunx -- bun vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@vue/cli-service": "^5.0.8",
